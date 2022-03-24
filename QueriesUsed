@@ -36,6 +36,3 @@ FROM
 4. View the data
 
 SELECT * FROM "energydb"."energy_view1";
-
-
-
