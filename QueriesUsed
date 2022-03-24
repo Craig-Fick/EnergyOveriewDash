@@ -1,0 +1,41 @@
+This document is a list of Queries ran to establish the database, data table, and data view.
+
+1. Create database
+
+CREATE DATABASE energydb;
+
+2. Create table
+
+CREATE EXTERNAL TABLE energy_table1(
+  `Local time` date, 
+  `D` int, 
+  `DF` int, 
+  `NG` int, 
+  `Hour` int)
+ROW FORMAT DELIMITED 
+  FIELDS TERMINATED BY ',' 
+STORED AS INPUTFORMAT 
+'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  's3://teststoragework/'
+TBLPROPERTIES (
+  'has_encrypted_data'='false', 
+  'skip.header.line.count'='1', 
+  'transient_lastDdlTime'='1595149168')
+
+3. Create view
+
+CREATE OR REPLACE VIEW energy_view1 AS 
+SELECT
+*
+FROM
+  energy_table1
+  
+4. View the data
+
+SELECT * FROM "energydb"."energy_view1";
+
+
+
