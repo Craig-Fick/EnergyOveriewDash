@@ -15,3 +15,4 @@ https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/US48/US4
 
 The dashboard created:
 <iframe src="https://public.tableau.com/views/EnergyOverviewDash/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"></iframe>
+<iframe src="https://public.tableau.com/views/EnergyOverviewDash/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link" width = '650' height = '450'></iframe>
